@@ -13,6 +13,9 @@ export const metadata = {
     siteName: 'Bolna Dey',
     type: 'website',
   },
+  icons: {
+    icon: '/bolnadey-sarkar.ico',
+  },
 };
 
 export default function RootLayout({ children }) {

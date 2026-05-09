@@ -18,54 +18,13 @@ export async function POST(request) {
 
     // ── SUPER ADMIN ──────────────────────────────────────
     const superAdmin = await User.create({
-      name: 'Super Admin',
-      email: 'superadmin@bolnadey.np',
+      name: 'Amit Khanal',
+      email: 'peoplesarmy01@gmail.com',
       password: 'SuperAdmin@2025',
       role: 'super_admin',
       adminPin: '123456',
       bio: 'Platform super administrator with full system access.',
       isVerified: true,
-    });
-
-    // ── SENIOR EDITOR ─────────────────────────────────────
-    const editor = await User.create({
-      name: 'Priya Sharma',
-      email: 'editor@bolnadey.np',
-      password: 'Editor@2025',
-      role: 'senior_editor',
-      adminPin: '654321',
-      bio: 'Senior investigative journalist covering corruption and governance in Nepal.',
-      isVerified: true,
-      articlesCount: 12,
-    });
-
-    // ── REPORTERS ─────────────────────────────────────────
-    const reporter1 = await User.create({
-      name: 'Raj Kumar',
-      email: 'raj@bolnadey.np',
-      password: 'Reporter@2025',
-      role: 'reporter',
-      bio: 'Political correspondent based in Kathmandu.',
-      isVerified: true,
-      articlesCount: 4,
-    });
-
-    const reporter2 = await User.create({
-      name: 'Anita Thapa',
-      email: 'anita@bolnadey.np',
-      password: 'Reporter@2025',
-      role: 'reporter',
-      bio: 'Local issues and community reporter from Lalitpur.',
-      isVerified: false,
-      articlesCount: 1,
-    });
-
-    // ── READER ────────────────────────────────────────────
-    await User.create({
-      name: 'Binita Gurung',
-      email: 'reader@bolnadey.np',
-      password: 'Reader@2025',
-      role: 'reader',
     });
 
     // ── ARTICLES ──────────────────────────────────────────

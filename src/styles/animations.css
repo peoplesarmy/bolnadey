@@ -1,0 +1,8 @@
+.card-lift { transition: transform .3s, box-shadow .3s; }
+.card-lift:hover { transform: translateY(-4px); box-shadow: 0 32px 80px rgba(0,0,0,.5); }
+
+.card-trend { border: 1px solid rgba(255,255,255,.05); transition: transform .25s, border-color .25s; }
+.card-trend:hover { transform: translateX(4px); border-color: rgba(255,77,136,.2); }
+
+.stat-cell { transition: background .2s; }
+.stat-cell:hover { background: var(--bg3); }

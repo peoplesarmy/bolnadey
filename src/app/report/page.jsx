@@ -105,9 +105,9 @@ function DistrictInput({ value, onChange, error }) {
             const prov = NEPAL_DISTRICTS_BY_PROVINCE.find(p => p.districts.includes(d))?.province || '';
             return (
               <div key={d} onMouseDown={() => pick(d)}
-                style={{ padding:'10px 16px',cursor:'pointer',background:selIdx===i?'rgba(255,77,136,.1)':i%2===0?'transparent':'rgba(255,255,255,.02)',borderBottom:'1px solid rgba(255,255,255,.04)',display:'flex',justifyContent:'space-between',alignItems:'center',transition:'background .15s' }}
-                onMouseOver={e=>e.currentTarget.style.background='rgba(255,77,136,.1)'}
-                onMouseOut={e=>e.currentTarget.style.background=selIdx===i?'rgba(255,77,136,.1)':i%2===0?'transparent':'rgba(255,255,255,.02)'}>
+                style={{ padding:'10px 16px',cursor:'pointer',background:selIdx===i?'rgba(139,92,246,.1)':i%2===0?'transparent':'rgba(255,255,255,.02)',borderBottom:'1px solid rgba(255,255,255,.04)',display:'flex',justifyContent:'space-between',alignItems:'center',transition:'background .15s' }}
+                onMouseOver={e=>e.currentTarget.style.background='rgba(139,92,246,.1)'}
+                onMouseOut={e=>e.currentTarget.style.background=selIdx===i?'rgba(139,92,246,.1)':i%2===0?'transparent':'rgba(255,255,255,.02)'}>
                 <span style={{ fontSize:13,fontWeight:600,color:'var(--w)' }}>📍 {d}</span>
                 <span style={{ fontSize:10,color:'var(--w4)',fontWeight:500,maxWidth:160,textAlign:'right' }}>{prov.split('(')[0].trim()}</span>
               </div>
@@ -124,13 +124,13 @@ function DistrictInput({ value, onChange, error }) {
           </div>
           {NEPAL_DISTRICTS_BY_PROVINCE.map(prov => (
             <div key={prov.province}>
-              <div style={{ padding:'8px 14px 4px',fontSize:9.5,fontWeight:800,letterSpacing:'.14em',textTransform:'uppercase',color:'var(--pink)',background:'rgba(255,77,136,.04)' }}>
+              <div style={{ padding:'8px 14px 4px',fontSize:9.5,fontWeight:800,letterSpacing:'.14em',textTransform:'uppercase',color:'var(--pink)',background:'rgba(139,92,246,.04)' }}>
                 {prov.province}
               </div>
               {prov.districts.map(d => (
                 <div key={d} onMouseDown={() => pick(d)}
                   style={{ padding:'8px 16px',cursor:'pointer',fontSize:13,color:'var(--w2)',borderBottom:'1px solid rgba(255,255,255,.03)',display:'flex',alignItems:'center',gap:6 }}
-                  onMouseOver={e=>e.currentTarget.style.background='rgba(255,77,136,.08)'}
+                  onMouseOver={e=>e.currentTarget.style.background='rgba(139,92,246,.08)'}
                   onMouseOut={e=>e.currentTarget.style.background='transparent'}>
                   <span style={{ color:'var(--w4)',fontSize:10 }}>📍</span> {d}
                 </div>
@@ -283,8 +283,8 @@ export default function ReportPage() {
             <div style={{ display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(160px,1fr))',gap:8 }}>
               {TYPES.map(t => (
                 <div key={t.key} onClick={() => set('type', t.key)}
-                  style={{ padding:'14px',borderRadius:14,border:`1.5px solid ${form.type===t.key?'var(--pink)':'rgba(255,255,255,.07)'}`,background:form.type===t.key?'rgba(255,77,136,.08)':'var(--bg3)',cursor:'pointer',transition:'all .18s' }}
-                  onMouseOver={e=>{ if(form.type!==t.key){ e.currentTarget.style.borderColor='rgba(255,77,136,.3)'; } }}
+                  style={{ padding:'14px',borderRadius:14,border:`1.5px solid ${form.type===t.key?'var(--pink)':'rgba(255,255,255,.07)'}`,background:form.type===t.key?'rgba(139,92,246,.08)':'var(--bg3)',cursor:'pointer',transition:'all .18s' }}
+                  onMouseOver={e=>{ if(form.type!==t.key){ e.currentTarget.style.borderColor='rgba(139,92,246,.3)'; } }}
                   onMouseOut={e=>{ if(form.type!==t.key){ e.currentTarget.style.borderColor='rgba(255,255,255,.07)'; } }}>
                   <div style={{ fontSize:22,marginBottom:6 }}>{t.icon}</div>
                   <div style={{ fontSize:11,fontWeight:800,letterSpacing:'.08em',textTransform:'uppercase',color:form.type===t.key?'var(--pink)':'var(--w3)',marginBottom:3 }}>{t.key}</div>
@@ -394,3 +394,4 @@ export default function ReportPage() {
     </div>
   );
 }
+

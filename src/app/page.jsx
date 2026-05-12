@@ -27,9 +27,9 @@ async function getData() {
 }
 
 const STORIES = [
-  { emoji: '🔴', label: 'Live',      ring: 'linear-gradient(135deg,#FF0A16,#FF4D88)' },
+  { emoji: '🔴', label: 'Live',      ring: 'linear-gradient(135deg,#FF0A16,#8B5CF6)' },
   { emoji: '🏛️', label: 'Politics',  ring: 'linear-gradient(135deg,#00F0FF,#00E676)' },
-  { emoji: '⚡', label: 'Invest.',   ring: 'linear-gradient(135deg,#C77DFF,#FF4D88)' },
+  { emoji: '⚡', label: 'Invest.',   ring: 'linear-gradient(135deg,#C77DFF,#8B5CF6)' },
   { emoji: '🛣️', label: 'Gov Work',  ring: 'linear-gradient(135deg,#FFD60A,#FF6D00)' },
   { emoji: '📢', label: 'Opinion',   ring: 'rgba(255,255,255,.1)' },
   { emoji: '🌱', label: 'Environ.',  ring: 'rgba(255,255,255,.1)' },
@@ -47,14 +47,14 @@ export default async function HomePage() {
       {/* Blobs */}
       <div style={{ position: 'fixed', inset: 0, pointerEvents: 'none', zIndex: 0, overflow: 'hidden' }}>
         <div className="blob" style={{ width: 500, height: 500, background: 'rgba(255,10,22,.07)', top: -100, right: -100 }} />
-        <div className="blob" style={{ width: 400, height: 400, background: 'rgba(255,77,136,.06)', bottom: '20%', left: -100, animationDelay: '-5s' }} />
+        <div className="blob" style={{ width: 400, height: 400, background: 'rgba(139,92,246,.06)', bottom: '20%', left: -100, animationDelay: '-5s' }} />
         <div className="blob" style={{ width: 300, height: 300, background: 'rgba(199,125,255,.05)', top: '40%', right: '20%', animationDelay: '-1s' }} />
       </div>
 
       {/* STORIES ROW */}
       <div style={{ maxWidth: 1440, margin: '0 auto', padding: '104px 28px 0', position: 'relative', zIndex: 1 }}>
         <div style={{ fontSize: 10, fontWeight: 800, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--pink)', marginBottom: 16, display: 'flex', alignItems: 'center', gap: 8 }}>
-          <span style={{ width: 20, height: 2, background: 'linear-gradient(to right,#FF0A16,#FF4D88)', display: 'inline-block' }} />
+          <span style={{ width: 20, height: 2, background: 'linear-gradient(to right,#FF0A16,#8B5CF6)', display: 'inline-block' }} />
           Categories
         </div>
         <div style={{ display: 'flex', gap: 16, overflowX: 'auto', paddingBottom: 4, scrollbarWidth: 'none' }}>
@@ -79,14 +79,14 @@ export default async function HomePage() {
                 <div style={{ height: 320, background: 'linear-gradient(135deg,var(--bg3),var(--bg4))', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 100, position: 'relative' }}>
                   <span>⚡</span>
                   <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom,transparent 40%,var(--bg2) 100%)' }} />
-                  <div style={{ position: 'absolute', top: 20, right: 20, background: 'rgba(255,77,136,.15)', border: '1px solid rgba(255,77,136,.35)', color: 'var(--pink)', fontSize: 11, fontWeight: 800, padding: '5px 12px', borderRadius: 100, animation: 'floatAnim 4s ease-in-out infinite', transform: 'rotate(6deg)' }}>⚡ Featured</div>
+                  <div style={{ position: 'absolute', top: 20, right: 20, background: 'rgba(139,92,246,.15)', border: '1px solid rgba(139,92,246,.35)', color: 'var(--pink)', fontSize: 11, fontWeight: 800, padding: '5px 12px', borderRadius: 100, animation: 'floatAnim 4s ease-in-out infinite', transform: 'rotate(6deg)' }}>⚡ Featured</div>
                 </div>
                 <div style={{ padding: '24px 28px 28px' }}>
                   <div style={{ display: 'flex', gap: 8, marginBottom: 14, flexWrap: 'wrap' }}>
                     <span style={{ background: 'rgba(255,10,22,.15)', border: '1px solid rgba(255,10,22,.3)', color: 'var(--red)', fontSize: 10, fontWeight: 800, padding: '4px 12px', borderRadius: 100, display: 'flex', alignItems: 'center', gap: 5 }}>
                       <span style={{ width: 5, height: 5, background: 'var(--red)', borderRadius: '50%', animation: 'pulseAnim 1.4s infinite' }} /> Live
                     </span>
-                    <span style={{ background: 'rgba(255,77,136,.12)', border: '1px solid rgba(255,77,136,.25)', color: 'var(--pink)', fontSize: 10, fontWeight: 800, padding: '4px 12px', borderRadius: 100 }}>{featured.category}</span>
+                    <span style={{ background: 'rgba(139,92,246,.12)', border: '1px solid rgba(139,92,246,.25)', color: 'var(--pink)', fontSize: 10, fontWeight: 800, padding: '4px 12px', borderRadius: 100 }}>{featured.category}</span>
                   </div>
                   <h1 style={{ fontFamily: 'var(--font-unbounded)', fontSize: 28, fontWeight: 800, lineHeight: 1.15, letterSpacing: '-.01em', color: 'var(--w)', marginBottom: 12 }}>
                     {featured.title.includes('Where') ? <>{featured.title.split(':')[0]}: <span style={{ background: 'var(--grad1)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>{featured.title.split(':')[1]}</span></> : featured.title}
@@ -94,13 +94,13 @@ export default async function HomePage() {
                   <p style={{ fontFamily: 'var(--font-playfair)', fontStyle: 'italic', fontSize: 14, color: 'var(--w3)', lineHeight: 1.7, marginBottom: 20 }}>{featured.excerpt}</p>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 0 }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                      <div style={{ width: 28, height: 28, borderRadius: '50%', background: 'linear-gradient(135deg,#FF0A16,#FF4D88)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 10, fontWeight: 800, color: 'white' }}>{(featured.author?.name || 'U').slice(0,2).toUpperCase()}</div>
+                      <div style={{ width: 28, height: 28, borderRadius: '50%', background: 'linear-gradient(135deg,#FF0A16,#8B5CF6)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 10, fontWeight: 800, color: 'white' }}>{(featured.author?.name || 'U').slice(0,2).toUpperCase()}</div>
                       <div><div style={{ fontSize: 12, fontWeight: 700, color: 'var(--w2)' }}>{featured.author?.name}</div><div style={{ fontSize: 11, color: 'var(--w4)' }}>{featured.readTime} min read</div></div>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginLeft: 'auto' }}>
                       <span style={{ fontSize: 11.5, color: 'var(--w4)' }}>👏 {featured.reactions?.clap || 0}</span>
                       <span style={{ fontSize: 11.5, color: 'var(--w4)' }}>💬 {featured.commentsCount}</span>
-                      <span style={{ padding: '10px 20px', background: 'linear-gradient(135deg,#FF0A16,#FF4D88)', borderRadius: 100, fontSize: 12, fontWeight: 700, color: 'white', boxShadow: '0 4px 20px rgba(255,10,22,.22)' }}>Read Now →</span>
+                      <span style={{ padding: '10px 20px', background: 'linear-gradient(135deg,#FF0A16,#8B5CF6)', borderRadius: 100, fontSize: 12, fontWeight: 700, color: 'white', boxShadow: '0 4px 20px rgba(255,10,22,.22)' }}>Read Now →</span>
                     </div>
                   </div>
                 </div>
@@ -138,7 +138,7 @@ export default async function HomePage() {
       </div>
 
       {/* MARQUEE */}
-      <div style={{ marginTop: 32, background: 'linear-gradient(135deg,#FF0A16,#FF4D88)', padding: '14px 0', overflow: 'hidden' }}>
+      <div style={{ marginTop: 32, background: 'linear-gradient(135deg,#FF0A16,#8B5CF6)', padding: '14px 0', overflow: 'hidden' }}>
         <div className="animate-ticker" style={{ display: 'inline-flex', whiteSpace: 'nowrap', alignItems: 'center' }}>
           {['BOLNA DEY','LET THE PEOPLE SPEAK','जनताको आवाज़','ACCOUNTABILITY','TRANSPARENCY','TRUTH','BOLNA DEY','LET THE PEOPLE SPEAK','जनताको आवाज़','ACCOUNTABILITY','TRANSPARENCY','TRUTH'].map((item, i) => (
             <div key={i} style={{ fontFamily: 'var(--font-unbounded)', fontSize: 13, fontWeight: 800, letterSpacing: '.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,.9)', display: 'flex', alignItems: 'center', marginRight: 0 }}>
@@ -211,7 +211,7 @@ export default async function HomePage() {
       {/* CTA */}
       <div style={{ maxWidth: 1440, margin: '0 auto', padding: '48px 28px 80px', position: 'relative', zIndex: 1 }}>
         <div style={{ background: 'var(--bg2)', border: '1px solid rgba(255,255,255,.06)', borderRadius: 28, padding: 56, display: 'grid', gridTemplateColumns: '1fr auto', alignItems: 'center', gap: 40, position: 'relative', overflow: 'hidden' }}>
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg,rgba(255,10,22,.06) 0%,rgba(255,77,136,.04) 40%,rgba(199,125,255,.04) 100%)', pointerEvents: 'none' }} />
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg,rgba(255,10,22,.06) 0%,rgba(139,92,246,.04) 40%,rgba(199,125,255,.04) 100%)', pointerEvents: 'none' }} />
           <div style={{ position: 'absolute', right: -20, bottom: -20, fontFamily: 'var(--font-unbounded)', fontSize: 180, fontWeight: 900, color: 'var(--red)', opacity: .03, lineHeight: 1, pointerEvents: 'none' }}>SPEAK</div>
           <div style={{ position: 'relative' }}>
             <div style={{ fontSize: 10, fontWeight: 800, letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--pink)', marginBottom: 12, display: 'flex', alignItems: 'center', gap: 8 }}>
@@ -228,7 +228,7 @@ export default async function HomePage() {
             </div>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12, flexShrink: 0, position: 'relative' }}>
-            <Link href="/report" style={{ padding: '18px 36px', background: 'linear-gradient(135deg,#FF0A16,#FF4D88)', border: 'none', borderRadius: 100, fontFamily: 'var(--font-unbounded)', fontSize: 14, fontWeight: 800, color: 'white', textDecoration: 'none', textAlign: 'center', transition: 'all .3s', boxShadow: '0 8px 32px rgba(255,10,22,.22)', whiteSpace: 'nowrap' }}>Report an Issue ↗</Link>
+            <Link href="/report" style={{ padding: '18px 36px', background: 'linear-gradient(135deg,#FF0A16,#8B5CF6)', border: 'none', borderRadius: 100, fontFamily: 'var(--font-unbounded)', fontSize: 14, fontWeight: 800, color: 'white', textDecoration: 'none', textAlign: 'center', transition: 'all .3s', boxShadow: '0 8px 32px rgba(255,10,22,.22)', whiteSpace: 'nowrap' }}>Report an Issue ↗</Link>
             <Link href="/register" style={{ padding: '14px 28px', background: 'rgba(255,255,255,.05)', border: '1px solid rgba(255,255,255,.1)', borderRadius: 100, fontFamily: 'var(--font-outfit)', fontSize: 13, fontWeight: 700, color: 'var(--w2)', textDecoration: 'none', textAlign: 'center', transition: 'all .25s', whiteSpace: 'nowrap' }}>Join the Platform</Link>
           </div>
         </div>

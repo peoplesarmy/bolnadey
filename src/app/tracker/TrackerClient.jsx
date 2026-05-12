@@ -338,7 +338,7 @@ export default function TrackerClient({ initialProjects, stats: initStats, canMa
         <div style={{ display:'grid',gridTemplateColumns:'repeat(5,1fr)',gap:10,marginBottom:24 }}>
           {[{ k:'total',label:'Total',color:'linear-gradient(135deg,var(--red),var(--pink))' },...STATUSES.map(s=>({ k:s,label:s,color:`linear-gradient(135deg,${ST[s].color},${ST[s].color}88)` }))].map(({ k,label,color }) => (
             <div key={k} onClick={() => setFilter(k==='total'?'all':k)}
-              style={{ background:filter===(k==='total'?'all':k)?'var(--bg3)':'var(--bg2)',border:`1px solid ${filter===(k==='total'?'all':k)?'rgba(255,77,136,.25)':'rgba(255,255,255,.05)'}`,borderTop:`3px solid ${ST[k]?.color||'var(--pink)'}`,borderRadius:16,padding:'18px 16px',cursor:'pointer',transition:'all .2s' }}>
+              style={{ background:filter===(k==='total'?'all':k)?'var(--bg3)':'var(--bg2)',border:`1px solid ${filter===(k==='total'?'all':k)?'rgba(139,92,246,.25)':'rgba(255,255,255,.05)'}`,borderTop:`3px solid ${ST[k]?.color||'var(--pink)'}`,borderRadius:16,padding:'18px 16px',cursor:'pointer',transition:'all .2s' }}>
               <div style={{ fontFamily:'var(--font-unbounded,sans-serif)',fontSize:32,fontWeight:900,marginBottom:4,background:color,WebkitBackgroundClip:'text',WebkitTextFillColor:'transparent',backgroundClip:'text' }}>{stats[k]}</div>
               <div style={{ fontSize:9.5,fontWeight:700,letterSpacing:'.14em',textTransform:'uppercase',color:'var(--w4)' }}>{label}</div>
             </div>
@@ -370,7 +370,7 @@ export default function TrackerClient({ initialProjects, stats: initStats, canMa
               const s = ST[p.status] || ST.Planned;
               const spentPct = p.budget ? Math.round((p.spent/p.budget)*100) : 0;
               return (
-                <div key={p._id} style={{ background:'var(--bg2)',border:`1px solid ${isExp?'rgba(255,77,136,.2)':'rgba(255,255,255,.05)'}`,borderRadius:20,overflow:'hidden',transition:'border-color .25s' }}>
+                <div key={p._id} style={{ background:'var(--bg2)',border:`1px solid ${isExp?'rgba(139,92,246,.2)':'rgba(255,255,255,.05)'}`,borderRadius:20,overflow:'hidden',transition:'border-color .25s' }}>
                   {/* Status stripe */}
                   <div style={{ height:3,background:`linear-gradient(to right,${s.color},${s.color}44)` }} />
 
@@ -481,3 +481,4 @@ export default function TrackerClient({ initialProjects, stats: initStats, canMa
     </div>
   );
 }
+

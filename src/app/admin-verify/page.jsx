@@ -84,7 +84,7 @@ export default function AdminVerifyPage() {
           </h1>
           <p style={{ fontSize: 13, color: 'var(--w3)', lineHeight: 1.6, marginBottom: 28 }}>
             Signed in as <strong style={{ color: 'var(--w)' }}>{session?.user?.name}</strong>
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4, marginLeft: 8, background: 'rgba(255,77,136,.1)', border: '1px solid rgba(255,77,136,.2)', color: 'var(--pink)', fontSize: 9, fontWeight: 800, letterSpacing: '.12em', textTransform: 'uppercase', padding: '2px 8px', borderRadius: 100 }}>
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4, marginLeft: 8, background: 'rgba(139,92,246,.1)', border: '1px solid rgba(139,92,246,.2)', color: 'var(--pink)', fontSize: 9, fontWeight: 800, letterSpacing: '.12em', textTransform: 'uppercase', padding: '2px 8px', borderRadius: 100 }}>
               {roleLabel}
             </span>
             <br />Enter your 6-digit admin PIN to access the dashboard.
@@ -137,3 +137,4 @@ export default function AdminVerifyPage() {
     </div>
   );
 }
+

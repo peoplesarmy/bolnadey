@@ -181,7 +181,7 @@ src/
 /* Fonts: Unbounded (display) + Outfit (body) + Playfair Display (italic serif) */
 /* Colors */
 --red:    #FF0A16   /* Primary brand */
---pink:   #FF4D88   /* Accent 1 */
+--pink:   #8B5CF6   /* Accent 1 */
 --cyan:   #00F0FF   /* Accent 2 */
 --purple: #C77DFF   /* Accent 3 */
 --yellow: #FFD60A   /* Accent 4 */

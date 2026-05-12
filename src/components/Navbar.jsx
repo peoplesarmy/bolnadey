@@ -30,7 +30,7 @@ export default function Navbar() {
   return (
     <nav style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000 }}>
       {/* Ticker */}
-      <div style={{ height: 30, background: 'linear-gradient(to right,#FF0A16,#FF4D88,#C77DFF,#00F0FF,#FF0A16)', backgroundSize: '400%', animation: 'shimmer 8s linear infinite', display: 'flex', alignItems: 'center', overflow: 'hidden', position: 'relative' }}>
+      <div style={{ height: 30, background: 'linear-gradient(to right,#FF0A16,#8B5CF6,#C77DFF,#00F0FF,#FF0A16)', backgroundSize: '400%', animation: 'shimmer 8s linear infinite', display: 'flex', alignItems: 'center', overflow: 'hidden', position: 'relative' }}>
         <div style={{ position: 'absolute', left: 0, zIndex: 2, background: 'var(--bg)', color: 'var(--pink)', fontFamily: 'var(--font-unbounded)', fontSize: 9, letterSpacing: '.2em', padding: '0 14px', height: '100%', display: 'flex', alignItems: 'center' }}>NOW</div>
         <div style={{ paddingLeft: 80, overflow: 'hidden', flex: 1 }}>
           <div className="animate-ticker" style={{ display: 'inline-flex', whiteSpace: 'nowrap' }}>
@@ -42,13 +42,13 @@ export default function Navbar() {
       </div>
 
       {/* Main bar */}
-      <div style={{ margin: '8px 20px', background: scrolled ? 'rgba(8,8,15,.96)' : 'rgba(8,8,15,.82)', backdropFilter: 'blur(28px) saturate(1.6)', border: `1px solid ${scrolled ? 'rgba(255,77,136,.15)' : 'rgba(255,255,255,.07)'}`, borderRadius: 100, display: 'flex', alignItems: 'center', height: 52, padding: '0 8px 0 16px', transition: 'all .3s', boxShadow: scrolled ? '0 8px 40px rgba(0,0,0,.5)' : 'none' }}>
+      <div style={{ margin: '8px 20px', background: scrolled ? 'rgba(8,8,15,.96)' : 'rgba(8,8,15,.82)', backdropFilter: 'blur(28px) saturate(1.6)', border: `1px solid ${scrolled ? 'rgba(139,92,246,.15)' : 'rgba(255,255,255,.07)'}`, borderRadius: 100, display: 'flex', alignItems: 'center', height: 52, padding: '0 8px 0 16px', transition: 'all .3s', boxShadow: scrolled ? '0 8px 40px rgba(0,0,0,.5)' : 'none' }}>
         {/* Logo */}
         <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 10, marginRight: 32, textDecoration: 'none', flexShrink: 0 }}>
-          <div style={{ width: 34, height: 34, borderRadius: 10, background: 'linear-gradient(135deg,#FF0A16,#FF4D88)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div style={{ width: 34, height: 34, borderRadius: 10, background: 'linear-gradient(135deg,#FF0A16,#8B5CF6)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <span style={{ fontFamily: 'var(--font-unbounded)', fontSize: 16, fontWeight: 900, color: 'white' }}>B</span>
           </div>
-          <span style={{ fontFamily: 'var(--font-unbounded)', fontSize: 14, fontWeight: 800, background: 'linear-gradient(135deg,#FF0A16,#FF4D88)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', letterSpacing: '.06em' }}>BOLNA DEY</span>
+          <span style={{ fontFamily: 'var(--font-unbounded)', fontSize: 14, fontWeight: 800, background: 'linear-gradient(135deg,#FF0A16,#8B5CF6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', letterSpacing: '.06em' }}>BOLNA DEY</span>
         </Link>
 
         {/* Links */}
@@ -74,7 +74,7 @@ export default function Navbar() {
           ) : (
             <>
               <Link href="/login" style={{ padding: '8px 18px', background: 'rgba(255,255,255,.06)', border: '1px solid rgba(255,255,255,.1)', borderRadius: 100, fontFamily: 'var(--font-outfit)', fontSize: 12, fontWeight: 700, color: 'var(--w3)', cursor: 'pointer', transition: 'all .2s', textDecoration: 'none' }}>Sign In</Link>
-              <Link href="/register" style={{ padding: '8px 20px', background: 'linear-gradient(135deg,#FF0A16,#FF4D88)', border: 'none', borderRadius: 100, fontFamily: 'var(--font-outfit)', fontSize: 12, fontWeight: 700, color: 'white', cursor: 'pointer', transition: 'all .25s', textDecoration: 'none', boxShadow: '0 4px 20px rgba(255,10,22,.22)' }}>Join Free ✦</Link>
+              <Link href="/register" style={{ padding: '8px 20px', background: 'linear-gradient(135deg,#FF0A16,#8B5CF6)', border: 'none', borderRadius: 100, fontFamily: 'var(--font-outfit)', fontSize: 12, fontWeight: 700, color: 'white', cursor: 'pointer', transition: 'all .25s', textDecoration: 'none', boxShadow: '0 4px 20px rgba(255,10,22,.22)' }}>Join Free ✦</Link>
             </>
           )}
         </div>
@@ -82,3 +82,4 @@ export default function Navbar() {
     </nav>
   );
 }
+

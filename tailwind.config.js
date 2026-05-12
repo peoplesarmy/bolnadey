@@ -10,7 +10,7 @@ module.exports = {
       },
       colors: {
         bg: { DEFAULT: '#04040A', 2: '#08080F', 3: '#0E0E18', 4: '#14141F', 5: '#1C1C28' },
-        brand: { red: '#FF0A16', pink: '#FF4D88', cyan: '#00F0FF', yellow: '#FFD60A', purple: '#C77DFF', green: '#00E676', orange: '#FF6D00' },
+        brand: { red: '#FF0A16', pink: '#8B5CF6', cyan: '#00F0FF', yellow: '#FFD60A', purple: '#C77DFF', green: '#00E676', orange: '#FF6D00' },
       },
       animation: {
         shimmer: 'shimmer 8s linear infinite',
@@ -28,3 +28,4 @@ module.exports = {
   },
   plugins: [],
 };
+

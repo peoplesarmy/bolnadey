@@ -41,7 +41,7 @@ export default async function ProfilePage({ params }) {
   const isOwn = session?.user?.id === params.id;
 
   const initials = user.name?.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase() || '??';
-  const gradients = ['linear-gradient(135deg,#FF0A16,#FF4D88)', 'linear-gradient(135deg,#00F0FF,#00E676)', 'linear-gradient(135deg,#C77DFF,#FF4D88)', 'linear-gradient(135deg,#FFD60A,#FF6D00)'];
+  const gradients = ['linear-gradient(135deg,#8B5CF6,#C77DFF)', 'linear-gradient(135deg,#00F0FF,#00E676)', 'linear-gradient(135deg,#C77DFF,#7C3AED)', 'linear-gradient(135deg,#FFD60A,#FF6D00)'];
   const grad = gradients[user.name?.charCodeAt(0) % gradients.length];
 
   const ROLE_LABEL = { admin: 'Administrator ✦', editor: 'Senior Journalist ✦', user: 'Citizen Reporter' };
@@ -59,13 +59,13 @@ export default async function ProfilePage({ params }) {
           <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: 'linear-gradient(to right,var(--red),var(--pink))' }} />
           <div style={{ position: 'absolute', right: -20, bottom: -20, fontFamily: 'var(--font-unbounded)', fontSize: 140, fontWeight: 900, color: 'var(--red)', opacity: .03, lineHeight: 1, pointerEvents: 'none' }}>BD</div>
 
-          <div style={{ width: 88, height: 88, borderRadius: '50%', background: grad, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-unbounded)', fontSize: 28, fontWeight: 900, color: 'white', flexShrink: 0, boxShadow: `0 0 0 4px rgba(255,77,136,.18), 0 0 0 8px rgba(255,77,136,.07)` }}>
+          <div style={{ width: 88, height: 88, borderRadius: '50%', background: grad, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-unbounded)', fontSize: 28, fontWeight: 900, color: 'white', flexShrink: 0, boxShadow: `0 0 0 4px rgba(139,92,246,.18), 0 0 0 8px rgba(139,92,246,.07)` }}>
             {initials}
           </div>
 
           <div style={{ flex: 1, minWidth: 200 }}>
             <h1 style={{ fontFamily: 'var(--font-unbounded)', fontSize: 'clamp(28px,4vw,42px)', fontWeight: 900, letterSpacing: '-.02em', marginBottom: 8 }}>{user.name}</h1>
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 5, background: 'rgba(255,77,136,.1)', border: '1px solid rgba(255,77,136,.2)', color: 'var(--pink)', fontSize: 10, fontWeight: 800, letterSpacing: '.16em', textTransform: 'uppercase', padding: '4px 12px', borderRadius: 100, marginBottom: 12 }}>
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 5, background: 'rgba(139,92,246,.1)', border: '1px solid rgba(139,92,246,.2)', color: 'var(--pink)', fontSize: 10, fontWeight: 800, letterSpacing: '.16em', textTransform: 'uppercase', padding: '4px 12px', borderRadius: 100, marginBottom: 12 }}>
               {ROLE_LABEL[user.role] || 'Contributor'}
             </span>
             {user.bio && <p style={{ fontFamily: 'var(--font-playfair)', fontStyle: 'italic', fontSize: 14, color: 'var(--w3)', lineHeight: 1.7, marginBottom: 18, maxWidth: 480 }}>{user.bio}</p>}
@@ -96,7 +96,7 @@ export default async function ProfilePage({ params }) {
                 return (
                   <Link key={a._id} href={`/news/${a.slug}`} style={{ textDecoration: 'none' }}>
                     <div style={{ background: 'var(--bg2)', border: '1px solid rgba(255,255,255,.05)', borderRadius: 18, overflow: 'hidden', cursor: 'pointer', transition: 'all .25s' }}
-                      onMouseOver={e => { e.currentTarget.style.borderColor = 'rgba(255,77,136,.2)'; e.currentTarget.style.transform = 'translateY(-3px)'; }}
+                      onMouseOver={e => { e.currentTarget.style.borderColor = 'rgba(139,92,246,.2)'; e.currentTarget.style.transform = 'translateY(-3px)'; }}
                       onMouseOut={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,.05)'; e.currentTarget.style.transform = 'none'; }}>
                       <div style={{ height: 150, background: 'var(--bg3)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 48 }}>
                         {a.category === 'Investigation' ? '⚡' : a.category === 'Politics' ? '🏛️' : a.category === 'Governance' ? '📋' : a.category === 'Environment' ? '🌱' : '📰'}

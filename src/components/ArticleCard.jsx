@@ -23,7 +23,7 @@ export default function ArticleCard({ article, size = 'normal' }) {
   return (
     <Link href={`/news/${article.slug}`} style={{ display: 'block', textDecoration: 'none' }}>
       <div style={{ background: 'var(--bg2)', border: '1px solid rgba(255,255,255,.05)', borderRadius: 20, overflow: 'hidden', cursor: 'pointer', transition: 'all .28s', height: '100%' }}
-        onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(255,77,136,.18)'; e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 20px 60px rgba(0,0,0,.4)'; }}
+        onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(139,92,246,.18)'; e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 20px 60px rgba(0,0,0,.4)'; }}
         onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,.05)'; e.currentTarget.style.transform = 'none'; e.currentTarget.style.boxShadow = 'none'; }}>
         {/* Image area */}
         <div style={{ background: 'var(--bg3)', height: isBig ? 260 : 180, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: isBig ? 80 : 56, position: 'relative' }}>
@@ -39,7 +39,7 @@ export default function ArticleCard({ article, size = 'normal' }) {
           <h3 style={{ fontFamily: 'var(--font-outfit)', fontSize: isBig ? 20 : 15, fontWeight: 700, lineHeight: 1.3, color: 'var(--w)', marginBottom: 8 }}>{article.title}</h3>
           <p style={{ fontSize: 12.5, color: 'var(--w3)', lineHeight: 1.6, marginBottom: 14, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{article.excerpt}</p>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, paddingTop: 12, borderTop: '1px solid rgba(255,255,255,.05)', flexWrap: 'wrap' }}>
-            <div style={{ width: 22, height: 22, borderRadius: '50%', background: 'linear-gradient(135deg,#FF0A16,#FF4D88)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 8, fontWeight: 800, color: 'white', flexShrink: 0 }}>
+            <div style={{ width: 22, height: 22, borderRadius: '50%', background: 'linear-gradient(135deg,#FF0A16,#8B5CF6)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 8, fontWeight: 800, color: 'white', flexShrink: 0 }}>
               {(article.author?.name || 'U').slice(0, 2).toUpperCase()}
             </div>
             <span style={{ fontSize: 11, fontWeight: 600, color: 'var(--w3)' }}>{article.author?.name}</span>
@@ -53,3 +53,4 @@ export default function ArticleCard({ article, size = 'normal' }) {
     </Link>
   );
 }
+

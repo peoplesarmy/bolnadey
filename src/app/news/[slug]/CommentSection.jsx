@@ -42,7 +42,7 @@ export default function CommentSection({ articleId, comments: initialComments, r
       {/* Reactions */}
       <div style={{ display: 'flex', gap: 8, marginTop: 36, flexWrap: 'wrap' }}>
         {REACTIONS.map(({ emoji, key }) => (
-          <button key={key} onClick={() => handleReact(key)} style={{ display: 'flex', alignItems: 'center', gap: 7, padding: '10px 18px', border: `1px solid ${reacted[key] ? 'var(--pink)' : 'rgba(255,255,255,.08)'}`, background: reacted[key] ? 'rgba(255,77,136,.1)' : 'var(--bg3)', borderRadius: 100, fontFamily: 'var(--font-outfit)', fontSize: 14, fontWeight: 600, color: reacted[key] ? 'var(--pink)' : 'var(--w2)', cursor: 'pointer', transition: 'all .18s' }}>
+          <button key={key} onClick={() => handleReact(key)} style={{ display: 'flex', alignItems: 'center', gap: 7, padding: '10px 18px', border: `1px solid ${reacted[key] ? 'var(--pink)' : 'rgba(255,255,255,.08)'}`, background: reacted[key] ? 'rgba(139,92,246,.1)' : 'var(--bg3)', borderRadius: 100, fontFamily: 'var(--font-outfit)', fontSize: 14, fontWeight: 600, color: reacted[key] ? 'var(--pink)' : 'var(--w2)', cursor: 'pointer', transition: 'all .18s' }}>
             {emoji} {reactions[key] || 0}
           </button>
         ))}
@@ -56,7 +56,7 @@ export default function CommentSection({ articleId, comments: initialComments, r
 
         {comments.map(c => (
           <div key={c._id} style={{ display: 'flex', gap: 12, padding: '14px 0', borderBottom: '1px solid rgba(255,255,255,.05)' }}>
-            <div style={{ width: 32, height: 32, borderRadius: '50%', background: 'linear-gradient(135deg,#FF0A16,#FF4D88)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 11, fontWeight: 800, color: 'white', flexShrink: 0 }}>
+            <div style={{ width: 32, height: 32, borderRadius: '50%', background: 'linear-gradient(135deg,#8B5CF6,#C77DFF)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 11, fontWeight: 800, color: 'white', flexShrink: 0 }}>
               {(c.author?.name || 'U').slice(0, 2).toUpperCase()}
             </div>
             <div>
@@ -67,11 +67,11 @@ export default function CommentSection({ articleId, comments: initialComments, r
         ))}
 
         <form onSubmit={handleComment} style={{ display: 'flex', gap: 10, marginTop: 20 }}>
-          <div style={{ width: 32, height: 32, borderRadius: '50%', background: session ? 'linear-gradient(135deg,#FF0A16,#FF4D88)' : 'var(--bg5)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 11, fontWeight: 800, color: 'white', flexShrink: 0, marginTop: 4 }}>
+          <div style={{ width: 32, height: 32, borderRadius: '50%', background: session ? 'linear-gradient(135deg,#8B5CF6,#C77DFF)' : 'var(--bg5)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 11, fontWeight: 800, color: 'white', flexShrink: 0, marginTop: 4 }}>
             {session ? session.user.name.slice(0, 2).toUpperCase() : '?'}
           </div>
           <input value={text} onChange={e => setText(e.target.value)} placeholder={session ? 'Drop a comment...' : 'Sign in to comment'} disabled={!session} className="form-input" style={{ flex: 1 }} />
-          <button type="submit" disabled={loading || !session} style={{ padding: '10px 20px', background: 'linear-gradient(135deg,#FF0A16,#FF4D88)', border: 'none', borderRadius: 100, fontFamily: 'var(--font-outfit)', fontSize: 12, fontWeight: 700, color: 'white', cursor: 'pointer', opacity: loading ? .7 : 1, whiteSpace: 'nowrap' }}>
+          <button type="submit" disabled={loading || !session} style={{ padding: '10px 20px', background: 'linear-gradient(135deg,#8B5CF6,#C77DFF)', border: 'none', borderRadius: 100, fontFamily: 'var(--font-outfit)', fontSize: 12, fontWeight: 700, color: 'white', cursor: 'pointer', opacity: loading ? .7 : 1, whiteSpace: 'nowrap' }}>
             {loading ? '...' : 'Post'}
           </button>
         </form>

@@ -54,7 +54,7 @@ export default function LoginPage() {
               <input className="form-input" style={{ borderRadius: 100 }} type="password" value={form.password} onChange={e => setForm(f => ({ ...f, password: e.target.value }))} placeholder="••••••••" />
             </div>
             <div style={{ textAlign: 'right', marginBottom: 24 }}><span style={{ fontSize: 12, fontWeight: 700, color: 'var(--pink)', cursor: 'pointer', letterSpacing: '.06em', textTransform: 'uppercase' }}>Forgot Password?</span></div>
-            <button type="submit" disabled={loading} style={{ width: '100%', padding: 16, background: loading ? 'var(--bg5)' : 'linear-gradient(135deg,#FF0A16,#FF4D88)', border: 'none', borderRadius: 100, fontFamily: 'var(--font-unbounded)', fontSize: 16, fontWeight: 800, color: 'white', cursor: loading ? 'not-allowed' : 'pointer', transition: 'all .3s', boxShadow: '0 8px 32px rgba(255,10,22,.22)', letterSpacing: '.08em' }}>
+            <button type="submit" disabled={loading} style={{ width: '100%', padding: 16, background: loading ? 'var(--bg5)' : 'linear-gradient(135deg,#FF0A16,#8B5CF6)', border: 'none', borderRadius: 100, fontFamily: 'var(--font-unbounded)', fontSize: 16, fontWeight: 800, color: 'white', cursor: loading ? 'not-allowed' : 'pointer', transition: 'all .3s', boxShadow: '0 8px 32px rgba(255,10,22,.22)', letterSpacing: '.08em' }}>
               {loading ? 'SIGNING IN...' : 'SIGN IN →'}
             </button>
           </form>
@@ -64,3 +64,4 @@ export default function LoginPage() {
     </div>
   );
 }
+

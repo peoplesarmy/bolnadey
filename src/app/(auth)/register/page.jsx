@@ -68,7 +68,7 @@ export default function RegisterPage() {
               <label style={{ fontSize: 9.5, fontWeight: 800, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--w3)', display: 'block', marginBottom: 9 }}>Password</label>
               <input className="form-input" style={{ borderRadius: 100 }} type="password" value={form.password} onChange={e => setForm(f => ({ ...f, password: e.target.value }))} placeholder="Min. 8 characters" />
             </div>
-            <button type="submit" disabled={loading} style={{ width: '100%', padding: 16, background: loading ? 'var(--bg5)' : 'linear-gradient(135deg,#FF0A16,#FF4D88)', border: 'none', borderRadius: 100, fontFamily: 'var(--font-unbounded)', fontSize: 16, fontWeight: 800, color: 'white', cursor: loading ? 'not-allowed' : 'pointer', transition: 'all .3s', boxShadow: '0 8px 32px rgba(255,10,22,.22)', letterSpacing: '.08em' }}>
+            <button type="submit" disabled={loading} style={{ width: '100%', padding: 16, background: loading ? 'var(--bg5)' : 'linear-gradient(135deg,#FF0A16,#8B5CF6)', border: 'none', borderRadius: 100, fontFamily: 'var(--font-unbounded)', fontSize: 16, fontWeight: 800, color: 'white', cursor: loading ? 'not-allowed' : 'pointer', transition: 'all .3s', boxShadow: '0 8px 32px rgba(255,10,22,.22)', letterSpacing: '.08em' }}>
               {loading ? 'CREATING...' : 'CREATE ACCOUNT ✦'}
             </button>
           </form>
@@ -78,3 +78,4 @@ export default function RegisterPage() {
     </div>
   );
 }
+

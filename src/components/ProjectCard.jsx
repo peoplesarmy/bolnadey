@@ -5,7 +5,7 @@ import { useState } from 'react';
 const STATUS_STYLE = {
   Completed: { bg: 'rgba(0,230,118,.1)',   color: '#00E676', bar: 'linear-gradient(to right,#00E676,#00F0FF)' },
   Ongoing:   { bg: 'rgba(255,109,0,.12)',  color: '#FF6D00', bar: 'linear-gradient(to right,#FF6D00,#FFD60A)' },
-  Delayed:   { bg: 'rgba(255,10,22,.1)',   color: '#FF0A16', bar: 'linear-gradient(to right,#FF0A16,#FF4D88)' },
+  Delayed:   { bg: 'rgba(255,10,22,.1)',   color: '#FF0A16', bar: 'linear-gradient(to right,#FF0A16,#8B5CF6)' },
   Planned:   { bg: 'rgba(41,121,255,.1)',  color: '#4488FF', bar: 'linear-gradient(to right,#2979FF,#C77DFF)' },
 };
 
@@ -25,7 +25,7 @@ export default function ProjectCard({ project, onVote }) {
 
   return (
     <div style={{ background: 'var(--bg2)', border: '1px solid rgba(255,255,255,.05)', borderRadius: 20, overflow: 'hidden', transition: 'border-color .25s' }}
-      onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(255,77,136,.15)'}
+      onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(139,92,246,.15)'}
       onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(255,255,255,.05)'}>
       <div style={{ display: 'grid', gridTemplateColumns: 'auto 1fr auto', gap: 14, padding: 20, alignItems: 'flex-start' }}>
         {/* Icon */}
@@ -77,3 +77,4 @@ export default function ProjectCard({ project, onVote }) {
     </div>
   );
 }
+

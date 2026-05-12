@@ -35,7 +35,7 @@ export default async function ArticlePage({ params }) {
   );
 
   const CAT_STYLE = { Investigation: { bg: 'rgba(255,10,22,.12)', color: '#FF0A16', border: 'rgba(255,10,22,.2)' }, Politics: { bg: 'rgba(199,125,255,.12)', color: '#C77DFF', border: 'rgba(199,125,255,.25)' }, Governance: { bg: 'rgba(0,240,255,.1)', color: '#00F0FF', border: 'rgba(0,240,255,.2)' }, Opinion: { bg: 'rgba(255,214,10,.1)', color: '#FFD60A', border: 'rgba(255,214,10,.22)' }, 'Local Issues': { bg: 'rgba(0,230,118,.1)', color: '#00E676', border: 'rgba(0,230,118,.2)' } };
-  const cs = CAT_STYLE[article.category] || { bg: 'rgba(255,77,136,.12)', color: '#FF4D88', border: 'rgba(255,77,136,.2)' };
+  const cs = CAT_STYLE[article.category] || { bg: 'rgba(139,92,246,.12)', color: '#8B5CF6', border: 'rgba(139,92,246,.2)' };
 
   return (
     <div style={{ maxWidth: 900, margin: '0 auto', padding: '110px 28px 80px' }}>
@@ -53,7 +53,7 @@ export default async function ArticlePage({ params }) {
 
       {/* Byline */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 14, padding: '14px 0', borderTop: '1px solid rgba(255,255,255,.06)', borderBottom: '1px solid rgba(255,255,255,.06)', marginBottom: 36 }}>
-        <div style={{ width: 42, height: 42, borderRadius: '50%', background: 'linear-gradient(135deg,#FF0A16,#FF4D88)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 14, fontWeight: 800, color: 'white', flexShrink: 0 }}>
+        <div style={{ width: 42, height: 42, borderRadius: '50%', background: 'linear-gradient(135deg,#8B5CF6,#C77DFF)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 14, fontWeight: 800, color: 'white', flexShrink: 0 }}>
           {(article.author?.name || 'U').slice(0, 2).toUpperCase()}
         </div>
         <div>

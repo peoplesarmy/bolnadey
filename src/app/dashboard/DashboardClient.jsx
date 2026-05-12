@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const ROLE_BADGE = {
   super_admin:   { label: 'Super Admin',    bg: 'rgba(255,10,22,.12)',   color: '#FF0A16', border: 'rgba(255,10,22,.25)' },
-  senior_editor: { label: 'Senior Editor',  bg: 'rgba(255,77,136,.12)',  color: '#FF4D88', border: 'rgba(255,77,136,.25)' },
+  senior_editor: { label: 'Senior Editor',  bg: 'rgba(139,92,246,.12)',  color: '#8B5CF6', border: 'rgba(139,92,246,.25)' },
   reporter:      { label: 'Reporter',       bg: 'rgba(0,240,255,.1)',    color: '#00F0FF', border: 'rgba(0,240,255,.2)' },
   reader:        { label: 'Reader',         bg: 'rgba(255,255,255,.06)', color: '#9898A0', border: 'rgba(255,255,255,.1)' },
 };
@@ -43,7 +43,7 @@ function RoleBadge({ role }) {
 function StatCard({ n, label, color, sub }) {
   return (
     <div style={{ background:'var(--bg2)',border:'1px solid rgba(255,255,255,.05)',borderRadius:16,padding:'20px 22px',position:'relative',overflow:'hidden',transition:'all .25s' }}
-      onMouseOver={e=>e.currentTarget.style.borderColor='rgba(255,77,136,.12)'}
+      onMouseOver={e=>e.currentTarget.style.borderColor='rgba(139,92,246,.12)'}
       onMouseOut={e=>e.currentTarget.style.borderColor='rgba(255,255,255,.05)'}>
       <div style={{ position:'absolute',top:0,left:0,right:0,height:2,background:color }} />
       <div style={{ fontFamily:'var(--font-unbounded,sans-serif)',fontSize:36,fontWeight:900,lineHeight:1,marginBottom:4,background:color,WebkitBackgroundClip:'text',WebkitTextFillColor:'transparent',backgroundClip:'text' }}>{n}</div>
@@ -206,7 +206,7 @@ export default function DashboardClient({ session, stats, pendingForReview, rece
             ) : (
               articles.pending.map(a => (
                 <div key={a._id} style={{ background:'var(--bg2)',border:'1px solid rgba(255,255,255,.05)',borderRadius:18,padding:'22px 24px',marginBottom:10,transition:'border-color .2s' }}
-                  onMouseOver={e=>e.currentTarget.style.borderColor='rgba(255,77,136,.15)'}
+                  onMouseOver={e=>e.currentTarget.style.borderColor='rgba(139,92,246,.15)'}
                   onMouseOut={e=>e.currentTarget.style.borderColor='rgba(255,255,255,.05)'}>
                   <div style={{ display:'flex',alignItems:'flex-start',justifyContent:'space-between',gap:16,flexWrap:'wrap' }}>
                     <div style={{ flex:1,minWidth:200 }}>
@@ -402,3 +402,4 @@ export default function DashboardClient({ session, stats, pendingForReview, rece
     </div>
   );
 }
+
